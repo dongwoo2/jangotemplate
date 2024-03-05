@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ex_template.apps.ExTemplateConfig', # 추가된 apps의 설정 class 이름을 가져오면 된다.
 ]
 
 MIDDLEWARE = [
