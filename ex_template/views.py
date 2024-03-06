@@ -54,4 +54,19 @@ def ex03(request):
         'info_list': info_list,
     }
     return render(request, 'ex_template/ex03.html', context)
+
+def ex04(request):
+    name_list = ['홍길동', '이순신', '김동우' , '김초코']
+    info_list = [
+        Info('홍길동', 33),
+        Info('이순신', 34),
+        Info('김동우', 23),
+        Info('김초코', 16),
+    ]
+    context = {
+        'value' : 100,
+        'name_list': name_list,
+        'info_list': info_list,
+    }
+    return render(request, 'ex_template/ex04.html', context)
     
