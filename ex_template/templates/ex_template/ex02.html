@@ -1,0 +1,16 @@
+
+val1 : {{ val1 }}<br>
+val1|escape : {{ val1|escape}}<br>
+val1|striptags : {{ val1|striptags }}<br>
+val1|length : {{ val1|length }}<br>
+val1|upper : {{ val1|upper }}<br>
+val1|linebreaks : {{ val1|linebreaks }}<br>
+val1|upper|linebreaks : {{ val1|upper|linebreaks }}<br> 
+<hr>
+1st |lower|join:"@" : {{ lst|lower|join:"@" }}<br>
+dic upper : {{ dic|upper }}<br>
+unknown | default : {{ unknown|default:"기본값" }}<br><!--settings 값이 우선된다-->
+bio|truncatewords:4 : {{ bio|truncatewords:4}}<br> <!--  : 4 이렇게 되어 있으면 space 값 까지 인식되어서 요소가 2개라고 오류가 남-->
+lst pluralize : {{ lst|pluralize }}<br>
+ls pluralize : {{ ls|pluralize }}<br>
+lss pluralize : {{ lss|pluralize:"es" }}

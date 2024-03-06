@@ -61,6 +61,7 @@ TEMPLATES = [
         'DIRS': [template_dir], # 템플릿 검색 경로 지정 따로 지정을 하지않으면 templates 폴더에서 먼저 찾겠다.
         'APP_DIRS': True,
         'OPTIONS': {
+            'string_if_invalid': 'Unknown Value!', # 데이터 없을 때 알려주는거 옵션이다 쓰고싶으면 쓰는 거
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
