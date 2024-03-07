@@ -70,3 +70,19 @@ def ex04(request):
     }
     return render(request, 'ex_template/ex04.html', context)
     
+    
+from django.urls import reverse
+
+def ex05(request):
+    url_list = [
+        reverse('ex_template:index'),
+        reverse('ex_template:ex01'),
+        reverse('ex_template:ex02'),
+        reverse('ex_template:ex03'),
+        reverse('ex_template:ex04'),
+        reverse('ex_template:ex05path', args=(10, 'hong')),
+    ]
+    
+    return render(request , 'ex_template/ex05.html',
+              {'url_list':url_list
+               , 'n':10, 'name':'kim'})
