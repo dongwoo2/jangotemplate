@@ -97,3 +97,14 @@ def ex06(request):
             return HttpResponse('로그인 성공')
         else:
             return HttpResponseRedirect(reverse('ex_template:ex06'))
+        
+    
+def ex07(request):
+    value = 100
+    info = Info('홍길동', 33)
+    context = {
+        'value' : value,
+        'info' : info,
+    }
+    
+    return render(request, 'ex_template/ex07.html', context)
