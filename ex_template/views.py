@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse ,HttpResponseRedirect
 # Create your views here.
 
 def index(request):
@@ -86,3 +86,14 @@ def ex05(request):
     return render(request , 'ex_template/ex05.html',
               {'url_list':url_list
                , 'n':10, 'name':'kim'})
+
+def ex06(request):
+    if request.method == 'GET':
+        return render(request, 'ex_template/ex06_login.html')
+    elif request.method == 'POST':
+        id = request.POST['id']
+        pw = request.POST['pw']
+        if id == pw:
+            return HttpResponse('로그인 성공')
+        else:
+            return HttpResponseRedirect(reverse('ex_template:ex06'))
