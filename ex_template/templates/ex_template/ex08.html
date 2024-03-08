@@ -1,0 +1,11 @@
+<h1>Hello</h1>
+결과: {{ html }}(이스케이프 되어 응답)
+{% comment 'escape' %}
+    문자열에 들어있는 태그가 브라우저에서 해석되지 않도록
+    특수문자로 변환하는 것
+{% endcomment %}
+{% autoescape off %} escape off
+결과: {{ html }}
+{% endautoescape %}
+결과: {{ html }}
+결과: {{ html|safe }} <!--이거 escape 안시켜도 안전하다고 판단될 때 escape off 시키는 필터가 safe 이게 조금 더 간단함-->

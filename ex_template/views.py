@@ -108,3 +108,14 @@ def ex07(request):
     }
     
     return render(request, 'ex_template/ex07.html', context)
+
+def ex08(request):
+    html = '''<h1>Hello</h1> 홍길동
+    <script>
+        alert('악의적인 동작');
+    </script>
+    '''
+    ctx = {
+        'html' : html,
+           }
+    return render(request, 'ex_template/ex08.html', ctx)

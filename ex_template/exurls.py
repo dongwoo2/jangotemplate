@@ -12,6 +12,7 @@ urlpatterns = [
     path('ex05/', views.ex05, name = 'ex05'),
     path('ex06/', views.ex06, name = 'ex06'),
     path('ex07/', views.ex07, name = 'ex07'),
+    path('ex08/', views.ex08, name = 'ex08'),
     
     path('ex05/<int:n>/<str:name>/', views.ex05, name = 'ex05path'),
 ]
