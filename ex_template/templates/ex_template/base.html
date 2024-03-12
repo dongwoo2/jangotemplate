@@ -1,14 +1,18 @@
 {# 이 템플릿은 모든 템플릿의 기본 베이스 #}
 {# 이 템플릿은 다른 템플릿이 상속하여 block이 지정된 부분을 재정의하여 표현한다. #}
+{% load static %} {#static 태그를 사용하기 전에는 load static을 먼저 써야한다 import 개념인가 보다#}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Exam Template{% endblock %}</title>
+    {#외부 css 파일은 head 속성안에서 사용한다. #}
+    <link rel="stylesheet" href="{% static 'ex_template/appstyle.css' %}">
 </head>
 <body>
     <div>뉴상단메뉴</div>
+    <img src = "{% static 'ex_template/parents.jpg' %}" width = "200px" height ="150px">
     <h1>Exam Template</h1>
     <hr>
     <h3>{% block headline %}Headline{% endblock %}</h3>
