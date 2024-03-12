@@ -1,3 +1,7 @@
+{% extends 'ex_template/base.html' %} {# base.html을 상속한다. #}
+{% block title %}Exam04{% endblock %}
+{% block headline %}예제 4 (템플릿 태그 if){% endblock %}
+{% block content %}
 {% if value == 100 %}
     {{ value }}
 {% endif %}
@@ -28,5 +32,5 @@
 {% else %}
     F
 {% endif %}
-
+{% endblock %}
 <!-- if 태그 - 변수가 True면 바로 아래의 문장 실행 -->

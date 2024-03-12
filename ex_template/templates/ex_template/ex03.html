@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-
-<div>상단메뉴</div>
+{% extends 'ex_template/base.html' %} {# base.html을 상속한다. #}
+{% block title %}Exam03{% endblock %}
+{% block headline %}예제 3 (템플릿 태그 for){% endblock %}
+{% block content %}
 {{ name_list.0 }}<br>
 {{ name_list.1 }}<br>
 {{ name_list.2 }}<br>
@@ -40,6 +33,4 @@
     </li>
     {% endfor %}
 </ul>
-<div>하단메뉴</div>
-</body>
-</html>
+{% endblock %}

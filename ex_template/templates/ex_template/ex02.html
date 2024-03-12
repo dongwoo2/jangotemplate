@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-
-<div>상단메뉴</div>
+{% extends 'ex_template/base.html' %} {# base.html을 상속한다. #}
+{% block title %}Exam02{% endblock %}
+{% block headline %}예제 2 (템플릿 변수와 필터){% endblock %}
+{% block content %}
 val1 : {{ val1 }}<br>
 val1|escape : {{ val1|escape}}<br>
 val1|striptags : {{ val1|striptags }}<br>
@@ -24,6 +17,4 @@ bio|truncatewords:4 : {{ bio|truncatewords:4}}<br> <!--  : 4 이렇게 되어 �
 lst pluralize : {{ lst|pluralize }}<br>
 ls pluralize : {{ ls|pluralize }}<br>
 lss pluralize : {{ lss|pluralize:"es" }}
-<div>하단메뉴</div>
-</body>
-</html>
+{% endblock %}

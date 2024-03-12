@@ -1,3 +1,7 @@
+{% extends 'ex_template/base.html' %} {# base.html을 상속한다. #}
+{% block title %}Exam05{% endblock %}
+{% block headline %}예제 5 (템플릿 태그 url 리버스){% endblock %}
+{% block content %}
 <h1>Hello</h1>
 결과: {{ html }}(이스케이프 되어 응답)
 {% comment 'escape' %}
@@ -9,3 +13,4 @@
 {% endautoescape %}
 결과: {{ html }}
 결과: {{ html|safe }} <!--이거 escape 안시켜도 안전하다고 판단될 때 escape off 시키는 필터가 safe 이게 조금 더 간단함-->
+{% endblock %}

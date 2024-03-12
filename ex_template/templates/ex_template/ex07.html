@@ -1,3 +1,7 @@
+{% extends 'ex_template/base.html' %} {# base.html을 상속한다. #}
+{% block title %}Exam07{% endblock %}
+{% block headline %}예제 7 (템플릿 태그 with){% endblock %}
+{% block content %}
 value : {{ value }}<br>
 <hr>
 {% with a=value %} <!--with는 템플릿을 처리하는 동안에 잠시 기억해둘 변수를 만들 떄 사용  a=value 선언에 공백이 있으묜 안된다.-->
@@ -22,3 +26,4 @@ a : [{{a}}]
     클라이언트에도 알려주지 않음 개발자 입장에서만 볼 수 있는 주석
     html 주석 태그는 클라이언트한테 보여짐
 {% endcomment %}
+{% endblock %}
