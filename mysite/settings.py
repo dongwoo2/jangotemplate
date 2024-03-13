@@ -120,7 +120,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+# 브라우저에서 정적 파일을 요청하는 URL이다.
 STATIC_URL = 'static/'
+
+# 정적 파일의 경로 추가
+import os # 로컬의 파일경로를 찾아올 수 있는 기능을 os가 가지고있다.
+STATIC_DIR = os.path.join(BASE_DIR, 'static_dir') # 경로를 만드는 거
+# 내 컴퓨터에서 실제 static_dir의 경로를 가져온다.
+
+# 장고에 정적파일의 경로를 추가 등록
+STATICFILES_DIRS = [# 꼭 뒤에 S를 붙이기
+    STATIC_DIR,
+]
+
+# 배포 시 정적파일을 묶어주기 위한 설정
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
